@@ -17,7 +17,12 @@
         <div class="grid"></div>
     </div>
     <div class="toolbar">
-        <span><input onchange="resizeGrid(this.value);" type="number" id="grid-size" name="grid-size"></span>
+        <span>
+            <input onchange="resizeGrid(this.value);" placeholder="16" min="1" type="number" id="grid-size" name="grid-size">
+        </span>
+        <span><input placeholder="Black" onchange="setColor(this.value)" type="text" id="grid-color"></button></span>
+        <span><button onclick="setColor('white')" id="grid-erase">Eraser</button></span>
+        <span><button onclick="resizeGrid(16)" id="grid-reset">Reset</button></span>    
     </div>
    </div>
 </body>

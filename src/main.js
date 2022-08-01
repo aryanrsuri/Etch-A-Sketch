@@ -1,4 +1,6 @@
 const BOX = document.querySelector(".grid");
+const ERASE = document.querySelector("#grid-erase");
+let Color = "black";
 function render() {
     console.log("Hello")
 }
@@ -34,9 +36,13 @@ function resizeGrid(value) {
     return 
 }
 
+function setColor(value) {
+    console.log(`Color set to ${value}`);
+    Color =  value.trim().toLowerCase()
+}
 function drawBox() {
-    this.style.backgroundColor = "red";
-    console.log("Clicked");
+    let color = Color;
+    this.style.backgroundColor = color;
 }
 
 (function() {buildGrid()})();
