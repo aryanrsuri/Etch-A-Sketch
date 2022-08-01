@@ -3,6 +3,7 @@ function render() {
     console.log("Hello")
 }
 
+
 function buildGrid(size) {
     if (size == null) {
         size = 16;
