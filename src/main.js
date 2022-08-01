@@ -40,4 +40,4 @@ function drawBox() {
     this.style.backgroundColor = color;
 }
 
-(function() {buildGrid()})();
+(buildGrid)();
