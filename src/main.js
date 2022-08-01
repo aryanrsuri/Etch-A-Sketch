@@ -10,8 +10,6 @@ function buildGrid(size) {
     }
 
     const CSS = `
-        display: grid;
-        gap: 0.2rem;
         grid-template-columns: repeat(${size},1fr);
         grid-template-rows: repeat(${size},1fr);
     `
@@ -21,6 +19,7 @@ function buildGrid(size) {
         let div = document.createElement("div");
         BOX.appendChild(div)
         div.classList.add("gridbox");
+        div.addEventListener("click", drawBox);
     }
 } 
 
@@ -34,4 +33,10 @@ function resizeGrid(value) {
 
     return 
 }
-(function() {buildGrid();})();
+
+function drawBox() {
+    this.style.backgroundColor = "red";
+    console.log("Clicked");
+}
+
+(function() {buildGrid()})();
