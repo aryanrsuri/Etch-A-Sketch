@@ -1,15 +1,10 @@
 const BOX = document.querySelector(".grid");
-const ERASE = document.querySelector("#grid-erase");
 let Color = "black";
-function render() {
-    console.log("Hello")
-}
-
 
 function buildGrid(size) {
-    if (size == null) {
+    if (size == null || size > 100) {
         size = 16;
-    }
+    } 
 
     const CSS = `
         grid-template-columns: repeat(${size},1fr);
